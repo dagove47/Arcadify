@@ -18,7 +18,12 @@ namespace ArcadifyWeb.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult HomePage()
+        {
+            return View();
+        }
+
+        public IActionResult NotFound()
         {
             return View();
         }
