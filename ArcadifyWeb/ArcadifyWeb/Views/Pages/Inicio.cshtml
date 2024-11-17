@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_LayoutPages.cshtml";
+}
+
+<main>
+    <section class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block mx-lg-auto img-fluid heroImage" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-4 text-center"><span class="mainColor">Bienvenido *Nombre*</span></h1>
+            <p class="lead heroText text-center">Explora las novedades y recomendaciones personalizadas en Arcadify. ¡No te pierdas nuestras ofertas exclusivas de esta semana!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-5">
+                @Html.ActionLink("Explorar Catálogo", "VideoJuegos", "Pages", new { area = "" }, new { @class = "btn btn-lg px-4 me-md-2 herobtn" })
+            </div>
+        </div>
+    </section>
+    <section class="homeIcons" id="homeIcons">
+        <div class="homeIcons-box">
+            <div class="homeIcons-circle">
+                <i class="bi bi-controller"></i>
+            </div>
+            <div class="homeIcons-title mt-2"> Consolas</div>
+        </div>
+        <div class="homeIcons-box">
+            <div class="homeIcons-circle">
+                <i class="bi bi-stars"></i>
+            </div>
+            <div class="homeIcons-title mt-2"> Tecnología</div>
+        </div>
+        <div class="homeIcons-box">
+            <div class="homeIcons-circle">
+                <i class="bi bi-joystick"></i>
+            </div>
+            <div class="homeIcons-title mt-2"> Diversión</div>
+        </div>
+    </section>
+    <section class="description container py-5" id="description">
+        <div class="row align-items-center">
+            <!-- Imagen -->
+            <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/5883539/pexels-photo-5883539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                     alt="Video game setup"
+                     class="img-fluid rounded shadow">
+            </div>
+            <!-- Texto -->
+            <div class="col-md-6">
+                <h2 class="mb-4 mainColor">¿Quiénes somos?</h2>
+                <p>En <strong>Arcadify</strong>, somos una tienda virtual dedicada a los amantes de los videojuegos. Ofrecemos una amplia selección de juegos para todas las plataformas, desde los clásicos que marcaron generaciones hasta los títulos más recientes y emocionantes.</p>
+                <p>Nuestra misión es hacer que tu experiencia gamer sea única y accesible, brindándote todo lo que necesitas en un solo lugar. ¡Explora, descubre y disfruta con nosotros!</p>
+                @Html.ActionLink("Conoce más sobre nosotros", "VideoJuegos", "Pages", new { area = "" }, new { @class = "btn btn-lg px-4 me-md-2 herobtn" })
+            </div>
+        </div>
+    </section>
+
+</main>

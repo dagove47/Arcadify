@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Arcadify</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ArcadifyWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/InitialLayout.css" asp-append-version="true" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body id="bodyRegLog">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand me-5 mainLogo" asp-area="" asp-controller="Autenticacion" asp-action="Index">Arcadify</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1 justify-content-end">
+                    <li class="nav-link ms-3">
+                        <a class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")" asp-area="" asp-controller="Pages" asp-action="Inicio">{Inicio}</a>
+                    </li>
+                    <li class="nav-link ms-3">
+                        <a class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Registrar" ? "active" : "")" asp-area="" asp-controller="Autenticacion" asp-action="Registrar">Registrarse</a>
+                    </li>
+                    <li class="nav-link ms-3">
+                        <a class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Ingresar" ? "active" : "")" asp-area="" asp-controller="Autenticacion" asp-action="Ingresar">Iniciar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content containerRegLog">
+        @RenderBody()
+    </div>
+    <footer class="bg-dark footer-distributed mt-5">
+        <div class="footer-left">
+            <h3><span>Arcadify</span></h3>
+            <p class="footer-links">
+                <a class="link-1" asp-area="" asp-controller="Autenticacion" asp-action="Index">Inicio</a>
+                <a class="" asp-area="" asp-controller="Autenticacion" asp-action="Registrar">Registrarse</a>
+                <a class="" asp-area="" asp-controller="Autenticacion" asp-action="Ingresar">Iniciar sesión</a>
+            </p>
+            <p class="footer-company-name">&copy; @DateTime.Now.Year <span style="color: #bc13fe;">Arcadify</span> Store</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="bi bi-geo-alt-fill"></i>
+                <p><span>San Antonio, Belén</span> Heredia, Costa Rica</p>
+            </div>
+            <div>
+                <i class="bi bi-phone"></i>
+                <p>+506 8765-4321</p>
+            </div>
+            <div>
+                <i class="bi bi-envelope"></i>
+                <p><a href="mailto:contact@arcadex.com">contact@arcadify.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre de nosotros</span>
+                Arcadify es una tienda virtual de videojuegos que ofrece una amplia selección de juegos para todas las plataformas. Encuentra tus opciones favoritas y disfruta de una experiencia única desde la comodidad de tu hogar.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

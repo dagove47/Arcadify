@@ -1,0 +1,80 @@
+﻿@model List<ArcadifyWeb.Models.GameModel>
+
+@{
+    ViewBag.Title = "VideoJuegos";
+    Layout = "~/Views/Shared/_LayoutPages.cshtml";
+}
+
+<main>
+    <section class="games-wrapper" id="games-wrapper">
+        <div class="games-list-wrapper">
+            <h2 class="p-3">Catálogo:</h2>
+            <div class="d-flex p-3 mb-4">
+                <input class="form-control me-2" id="search-Card" type="search" placeholder="Buscar videojuego"
+                       aria-label="Search" data-search>
+            </div>
+            <div class="cards-list" id="cards-list" data-game-cards-container>
+                @foreach (var game in Model)
+                {
+                    <div class="card bg-dark" style="width: 18rem;">
+                        <img src="@game.Thumbnail" class="card-img-top" alt="game image">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold mb-3" data-title>@game.Title</h5>
+                            <div class="subtitle-card col">
+                                Genero: &nbsp;<p class="card-text" data-genre>@game.Genre</p>
+                            </div>
+                            <div class="subtitle-card col">
+                                Plataforma: &nbsp;<p class="card-text" data-platform>@game.Platform</p>
+                            </div>
+                            <div class="subtitle-card col">
+                                Compañía: &nbsp;<p class="card-text" data-publisher>@game.Publisher</p>
+                            </div>
+                            <div class="subtitle-card col">
+                                Lanzamiento: &nbsp;<p class="card-text" data-release>@game.Release_Date</p>
+                            </div>
+                            <div class="subtitle-card col card-modal-btn">
+                                <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#cardModal-@game.Id">Información</a>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="cardModal-@game.Id" tabindex="-1" aria-labelledby="cardModalLabel-@game.Id" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content"
+                                     style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('@game.Thumbnail');">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fw-bold mainColor" id="cardModalLabel-@game.Id">@game.Title</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="subtitle-modal col">
+                                            Genero: &nbsp;<p class="modal-text">@game.Genre</p>
+                                        </div>
+                                        <div class="subtitle-modal col">
+                                            Plataforma: &nbsp;<p class="modal-text">@game.Platform</p>
+                                        </div>
+                                        <div class="subtitle-modal col">
+                                            Compañía: &nbsp;<p class="modal-text">@game.Publisher</p>
+                                        </div>
+                                        <div class="subtitle-modal col">
+                                            Lanzamiento: &nbsp;<p class="modal-text">@game.Release_Date</p>
+                                        </div>
+                                        <p class="modal-game-description">@game.Short_Description</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn modalbtn2" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn modalbtn1">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    function buscarCatalogo() {
+        document.getElementById("games-wrapper").scrollIntoView();
+    }
+</script>

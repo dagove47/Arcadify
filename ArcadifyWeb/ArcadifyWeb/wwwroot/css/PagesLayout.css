@@ -1,0 +1,526 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #131415;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Varela Round", sans-serif;
+    min-height: 100vh;
+}
+
+.nav-link:hover {
+    color: #bc13fe;
+}
+
+.mainColor {
+    color: #bc13fe;
+}
+
+.navbar .mainLogo {
+    color: #bc13fe;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.heroImage {
+    border-radius: 10px;
+    box-shadow: 0 0 0.75em #bc13fe;
+}
+
+.heroText {
+    color: #ededed;
+}
+
+.herobtn {
+    color: #fff;
+    border: 2px solid #bc13fe;
+}
+
+.herobtn:hover {
+    box-shadow: 0 0 2em #bc13fe;
+}
+
+.homeIcons {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to bottom, #131415, #101112 33%, #101112 66%, #131415);
+}
+
+.homeIcons-box {
+    width: 200px;
+    text-align: center;
+}
+
+.homeIcons-circle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    color: #bc13fe;
+}
+
+.homeIcons-title {
+    font-size: 25px;
+}
+
+
+.games-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+
+
+.games-list-wrapper {
+    width: 1200px;
+    height: 100%;
+    margin: 16px;
+}
+
+.games-list-wrapper h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #bc13fe;
+}
+
+.games-list-wrapper div input {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 1em #bc13fe;
+    border-radius: 15px;
+}
+
+.card-title {
+    color: #fff;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cards-list .card {
+    margin: 16px;
+    box-shadow: 0 0 0.7em #bc13fe;
+    border-radius: 15px;
+}
+
+.cards-list .card img {
+    border-radius: 15px 15px 0 0;
+}
+
+.subtitle-card {
+    display: flex;
+    color: #00b5cc;
+}
+
+.card-text {
+    color: #fff;
+}
+
+.card-modal-btn {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 0;
+}
+
+.card-modal-btn a {
+    background: rgba(188, 19, 254, 0.5);
+    color: #fff;
+    border: 2px solid #bc13fe;
+    width: 100%;
+}
+
+.card-modal-btn a:hover {
+    color: #fff;
+    box-shadow: 0 0 1em #bc13fe;
+}
+
+.hide {
+    display: none;
+}
+
+/* Modal */
+
+.modal {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.modal-header {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.modal-content {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0.7em #bc13fe;
+}
+
+.subtitle-modal {
+    font-size: 1.2rem;
+    display: flex;
+    color: #00b5cc;
+    font-weight: 600;
+}
+
+.modal-text {
+    color: #fff;
+    font-weight: normal;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.modal-game-description {
+    margin-top: 24px;
+    font-size: 1.2rem;
+}
+
+.modalbtn1 {
+    background: #bc13fe;
+    color: #fff;
+    border: 2px solid #bc13fe;
+}
+
+.modalbtn2 {
+    color: #fff;
+    border: 2px solid #bc13fe;
+}
+
+.modalbtn1:hover {
+    box-shadow: 0 0 1em #bc13fe;
+}
+
+.modalbtn2:hover {
+    box-shadow: 0 0 1em #bc13fe;
+}
+
+
+/* Game Info */
+.gameInfo-main {
+    min-height: 80vh;
+    display: flex;
+}
+
+.gameInfo-feature {
+    display: flex;
+    color: #b2df28;
+}
+
+.gameInfo-feature-text {
+    color: #fff;
+}
+
+.gameInfo-btn-buy {
+    color: #fff;
+    background: #8eb31e;
+    border-color: #8eb31e;
+}
+
+.gameInfo-btn-save {
+    color: #fff;
+    background: none;
+    border-color: #8eb31e;
+}
+
+.gameInfo-btn-buy:hover, .gameInfo-btn-save:hover {
+    box-shadow: 0 0 0.5em #bc13fe;
+}
+
+/* custom.css */
+.footer {
+    background-color: red; /* Same as bg-dark */
+    color: #ffffff; /* Light text for dark background */
+}
+
+.footer a {
+    color: #ffffff; /* Light text for links */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #adb5bd; /* Lighter gray on hover */
+    text-decoration: underline;
+}
+
+.footer h5 {
+    margin-bottom: 1rem;
+}
+
+.footer .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+/* Form style*/
+
+.bodyStoreRegLog {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.regLog {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.regLog-Title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #bc13fe;
+    padding: 16px 0;
+}
+
+.regLog form {
+    width: 250px;
+}
+
+.regLog form input {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.regLog form select {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.regLog form textarea {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.regLog form div {
+    padding: 16px 0;
+}
+
+.regLog-Submit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.regLog-Submit .btn{
+    color: #fff;
+    border: 2px solid #bc13fe;
+    width: 100%;
+}
+
+.regLog-Submit .btn:hover{
+    background: #bc13fe;
+}
+
+.regLog-Options {
+    color: #adb5bd;
+}
+
+.regLog-Options:hover {
+    color: #bc13fe;
+}
+
+/* FOOTER */
+.footer-distributed {
+    background: var(--fifth-color);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 30px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+.footer-distributed h3 {
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: #bc13fe;
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    opacity: 0.7;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    display: inline-block;
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #bc13fe;
+    text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}

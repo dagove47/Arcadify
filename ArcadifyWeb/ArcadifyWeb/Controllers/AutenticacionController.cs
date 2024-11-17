@@ -4,6 +4,10 @@ namespace ArcadifyWeb.Controllers
 {
     public class AutenticacionController : Controller
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
         public IActionResult Registrar()
         {
             return View();
@@ -20,6 +24,12 @@ namespace ArcadifyWeb.Controllers
         }
 
         public IActionResult RecuperarContrasena()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult NotFound404()
         {
             return View();
         }
