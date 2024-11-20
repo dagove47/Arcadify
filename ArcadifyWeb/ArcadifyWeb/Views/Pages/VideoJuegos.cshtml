@@ -58,9 +58,12 @@
                                         </div>
                                         <p class="modal-game-description">@game.Short_Description</p>
                                     </div>
-                                    <div class="modal-footer">
+                                    <div class="modal-footer justify-content-between">
                                         <button type="button" class="btn modalbtn2" data-bs-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn modalbtn1">Comprar</button>
+                                        <div>
+                                            <button type="button" class="btn modalbtn2 me-2" id="FavoritoBtn"><i class="bi bi-star"></i></button>
+                                            <button type="button" class="btn modalbtn1" id="ComprarBtn">Comprar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +77,57 @@
 </main>
 
 <script>
-    function buscarCatalogo() {
-        document.getElementById("games-wrapper").scrollIntoView();
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const botonesComprar = document.querySelectorAll('#ComprarBtn');
+        const botonesFavorito = document.querySelectorAll('#FavoritoBtn');
+
+        // Funcionalidad del botón "Comprar"
+        botonesComprar.forEach(boton => {
+            boton.addEventListener('click', () => {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Compra Exitosa!',
+                    text: 'Gracias por tu compra.',
+                    confirmButtonText: 'Aceptar'
+                }).then(() => {
+                    boton.textContent = '✔';
+                    boton.classList.remove('modalbtn1');
+                    boton.classList.add('btn-success');
+                    boton.disabled = true;
+                });
+            });
+        });
+
+        // Funcionalidad del botón "Favorito"
+        botonesFavorito.forEach(boton => {
+            boton.addEventListener('click', () => {
+                const icono = boton.querySelector('i');
+                if (icono.classList.contains('bi-star')) {
+                    // Si la estrella está vacía, agregarla a favoritos
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Agregado a Favoritos!',
+                        text: 'Este juego ha sido añadido a tu lista de favoritos.',
+                        confirmButtonText: 'Aceptar'
+                    }).then(() => {
+                        icono.classList.remove('bi-star');
+                        icono.classList.add('bi-star-fill');
+                        icono.style.color = 'yellow';
+                    });
+                } else {
+                    // Si ya está en favoritos, quitarla
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Eliminado de Favoritos',
+                        text: 'Este juego ha sido eliminado de tu lista de favoritos.',
+                        confirmButtonText: 'Aceptar'
+                    }).then(() => {
+                        icono.classList.remove('bi-star-fill');
+                        icono.classList.add('bi-star');
+                        icono.style.color = ''; // Quitar el color
+                    });
+                }
+            });
+        });
+    });
 </script>
