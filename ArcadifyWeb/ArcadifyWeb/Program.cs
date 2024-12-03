@@ -1,7 +1,16 @@
+using ArcadifyWeb.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpClient();
+builder.Services.AddSession();
 builder.Services.AddControllersWithViews();
+builder.Logging.AddConsole();
+builder.Services.AddHttpClient();
+
+// Configuración del servicio de email
+builder.Services.AddScoped<IMetodosComunes, MetodosComunes>();
 
 var app = builder.Build();
 
@@ -18,10 +27,9 @@ app.UseStatusCodePagesWithReExecute("/Autenticacion/NotFound404");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
